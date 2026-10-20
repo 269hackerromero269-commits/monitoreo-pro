@@ -5,5 +5,11 @@
   "display": "standalone",
   "background_color": "#0d1117",
   "theme_color": "#0d1117",
-  "icons": []
+  "icons": [
+    {
+      "src": "https://raw.githubusercontent.com/269hackerromero269-commits/monitoreo-pro/main/icon.png",
+      "sizes": "512x512",
+      "type": "image/png"
+    }
+  ]
 }
