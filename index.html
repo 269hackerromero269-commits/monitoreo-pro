@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Monitoreo Pro - Venezuela</title>
+    <!-- Enlace para la PWA -->
+    <link rel="manifest" href="manifest.json">
+    <meta name="theme-color" content="#0d1117">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="container">
+        <header>
+            <div class="header-top">
+                <h1>Monitoreo Pro</h1>
+                <button id="refresh-btn" class="refresh-btn" title="Actualizar tasas">🔄</button>
+            </div>
+            <p class="subtitle" id="status-text">Iniciando sistema...</p>
+            <p class="update-time" id="update-time">Última actualización: --:--</p>
+        </header>
+
+        <main>
+            <!-- Tarjetas de Tasas -->
+            <div class="rates-grid">
+                <div class="card active-card" id="card-bcv">
+                    <span class="card-title">Dólar BCV <span>(Base)</span></span>
+                    <div class="rate-value" id="bcv-rate">0,00 Bs</div>
+                    <span class="indicator">Tasa Oficial</span>
+                </div>
+                <div class="card" id="card-prom">
+                    <span class="card-title">Promedio</span>
+                    <div class="rate-value" id="prom-rate">0,00 Bs</div>
+                    <span class="indicator">Tasa Paralelo</span>
+                </div>
+            </div>
+
+            <!-- Calculadora Inteligente -->
+            <div class="calculator-card">
+                <h3 id="calc-title">Calculadora Rápida (Base BCV)</h3>
+                
+                <div class="input-group">
+                    <label for="usd-input">Dólares ($)</label>
+                    <div class="input-wrapper">
+                        <input type="number" id="usd-input" placeholder="0.00" step="any">
+                        <button class="copy-btn" title="Copiar monto">📋</button>
+                    </div>
+                </div>
+
+                <div class="input-group">
+                    <label for="bs-input">Bolívares (Bs)</label>
+                    <div class="input-wrapper">
+                        <input type="number" id="bs-input" placeholder="0.00" step="any">
+                        <button class="copy-btn" title="Copiar monto">📋</button>
+                    </div>
+                </div>
+            </div>
+        </main>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
