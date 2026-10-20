@@ -126,4 +126,3 @@ async function cargarTasasEnVivo() {
 refreshBtn.addEventListener('click', cargarTasasEnVivo);
 
 cargarTasasEnVivo();
-  
